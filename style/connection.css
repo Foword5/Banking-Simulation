@@ -1,0 +1,44 @@
+#connect_title{
+    background-color: white;
+    width: 50%;
+    padding: 20px;
+    margin: 0 auto 10px auto;
+    text-align: center;
+    font-size: 50px;
+}
+
+body {
+    font-size: 25px;
+}
+
+#login {
+    width: 40%;
+    margin: auto;
+    border-collapse: collapse;
+}
+
+#login td {
+    width: 50%;
+}
+
+#submit_login {
+    text-align: end;
+}
+
+input[type="text"],input[type="password"]{
+    width: 100%;
+    height: 25px;
+}
+
+#submit_login_button {
+    margin: 5px;
+} 
+
+.error {
+    background-color: #CCC;
+    width: 75%;
+    margin: auto;
+    text-align: center;
+    padding: 5px;
+    color: red;
+}

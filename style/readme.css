@@ -1,0 +1,42 @@
+.main {
+    width: 50%;
+    background-color: white;
+    margin: 10px auto 10px auto;
+    padding: 10px 40px 40px 40px;
+}
+
+#read_title {
+    text-align: center;
+    font-size: 50px;
+    padding: 40px;
+}
+
+p,ul {
+    margin: 0;
+}
+
+#names{
+    padding: 10px 40px 10px 40px;
+}
+
+#table_name {
+    width: 100%;
+}
+
+#retour {
+    position: fixed;
+    width: calc(25% - 60px);
+    display: flex;
+    justify-content: flex-end;
+}
+
+#retour input {
+    width: 100px;
+    height: 60px;
+}
+
+#retour a {
+    padding: 5px 20px 5px 20px;
+    background-color: white;
+    border-radius: 5px;
+}

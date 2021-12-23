@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+    <html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Read me</title>
+        <link href="style/all.css" rel="stylesheet"/>
+        <link href="style/readme.css" rel="stylesheet"/>
+        <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'/>
+    </head>
+    <body>
+        <div id="retour">
+            <a href="index.php">
+                <input type="submit" value="Retour">
+            </a>
+        </div>
+        <div id="read_title" class="main">Read me</div>
+        <div class="main" id="names">
+            <table id="table_name">
+                <tr>
+                    <td>Jules Delamare</td>
+                    <td>Guillaume Froment</td>
+                    <td>Minh Duc Bui</td>
+                    <td>Mehdi Jdaini</td>
+                    <td>Florian Sorin</td>
+                    <td>Hugo Comte</td>
+                </tr>
+            </table>
+        </div>
+        <div class="main">
+            <h2>Vue d'ensemble</h2>
+            <p>
+                Ceci est un projet réalisé dans le cadre de notre seconde année de DUT à l'IUT de vélizy.<br />
+                Ce site permet à tout utilisateur de simuler un prêt bancaire, plus précisément d’obtenir la somme à rembourser chaque mois en fonction du prêt total, du taux et du nombre de mois de remboursement voulu.<br />
+                <br />
+                La structure du système est la suivante : <br />
+                <img src="style/graphe_readme.png" width="100%" atl="graphe de la structure"> <br />
+                En <font color="#15aabf">bleu</font> les fichiers PHP visuel <br />
+                En <font color="#f4ac05">jaune</font> les fichiers PHP d'action <br />
+                En <font color="#fa5252">rouge</font> les fichiers de styles <br />
+            </p>
+        </div>
+        <div class="main">
+            <h2>Index.php</h2>
+            <p>
+                L’index est une page visible accessible par tout le monde, il permet de faire la simulation du prêt bancaire en envoyant les données entrées par l’utilisateur par le biais d’un formulaire à simulation.php qui calcule le prêt puis en les récupérant pour afficher le résultat en temps réel. Un tableau de l’historique est également affiché en utilisant le fichier history_user.csv qui répertorie tous les calculs effectués par les utilisateurs.
+            </p>
+        </div>
+        <div class="main">
+            <h2>Simulation.php</h2>
+            <p>
+                Simulation.php n’est pas une page visible mais un fichier d’action. Quand lancé, ce fichier va calculer le remboursement mensuel en fonction des valeurs données. De plus, il enregistre les données dans les deux historiques. Les données sont enregistrées en haut du des fichiers de manière à toujours les voir dans l’ordre de simulation des plus récentes au moins récentes.
+            </p>
+        </div>
+        <div class="main">
+            <h2>Connection.php - login.php/logout.php</h2>
+            <p>
+                La page de connection permet à l’admin de se connecter, le mot de passe est le même pour tous les admins, et il doit être modifié directement dans le fichier connect.csv :
+                <ul>
+                    <li>Par défaut le login est “admin”</li>
+                    <li>Par défaut le mot de passe est “admin”</li>
+                </ul>
+                Le mot de passe n’est pas affiché lorsqu’il est tapé, et les informations sont transmises en post, puis hashées en MD5 pour être comparées au contenu de connect.csv qui est aussi hashé en MD5
+            </p>
+        </div>
+        <div class="main">
+            <h2>Backend.php</h2>
+            <p>
+                Backend.php est la page de visualisation de l’historique administrateur et des archives et de la gestion de ces derniers. L’historique peut être supprimé, ce qui supprimera aussi celui de l’utilisateur, ou alors archivé dans un nouveau fichier. Les archives sont listées et on peut les supprimer, les télécharger ou juste les visualiser. L’administrateur peut aussi revenir à l’index ou se déconnecter.
+            </p>
+        </div>
+        <div class="main">
+            <h2>Archive.php</h2>
+            <p>
+                Archive.php est un fichier d’action qui se lance lorsqu’un historique est archivé ou supprimé ou lorsqu’une archive est supprimée. 
+                <br />L’archivage copie le contenue du fichier “admin.csv” et le met dans un nouveau fichier dans le dossier “data/archives/” sous un nom dépendant de l’heure de l’archive, de plus l'archivage supprime le contenu des fichiers “admin.csv” et “history_user.csv”. 
+                <br />La suppression va simplement retirer le contenu des fichiers “admin.csv” et “history_user.csv”. 
+                <br />La suppression d’une archive prend en argument le numéro de l’archive à supprimer, qui correspond à sa position dans la liste.                
+            </p>
+        </div>
+        <div class="main">
+            <h2>Dossier Style</h2>
+            <p>
+                C’est via le dossier design que la page de connexion ou la simulation sera plus agréable visuellement pour l’utilisateur.
+                <br />Ce dossier comprends plusieurs type de propriétés, comme margin/padding/border qui gère la position d’un contenu sur la page mais également font-family/color/background qui s’occupe de la mise en forme d’un texte et du site ou height/width qui gère la taille d’un objet (texte, image).
+                <br />Ces propriétés sont contenues dans des “règles”, cela peut-être via des “div” ou des éléments plus généraux tels que “body” ou “head”.
+                <br />De plus, nous avons ajouté des images pour la somptuosité (côté admin).
+                          
+            </p>
+        </div>
+        <div class="main">
+            <h2>Dossier Data</h2>
+            <p>Dans le dossier Data, nous pouvons trouver toutes les données stockées par le site. <br />
+                Elle consiste en : <br />
+                <ul>
+                    <li>history_user.csv : qui contient l’historique utilisateurs</li>
+                    <li>admin.csv : qui contient l’historique administrateur. Les deux historiques sont séparés pour des raisons de sécurité, tant que l’on n’est pas connecté, le fichier admin n’est pas ouvert.</li>
+                    <li>connect.csv : qui contient les login administrateur, hachés en md5.</li>
+                    <li>Le dossier archives : qui contient toutes les archives enregistrées sous le nom : année_mois_jour_heure_minute_seconde</li>
+                </ul>
+            </p>
+        </div>
+    </body>
+</html>

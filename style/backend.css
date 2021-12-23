@@ -1,0 +1,113 @@
+#back_title {
+    background-color: white;
+    width: 50%;
+    padding: 20px;
+    margin: 0 auto 10px auto;
+    text-align: center;
+    font-size: 50px;
+}
+
+#admin_hist {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+#admin_hist_table{
+    width: 90%;
+    margin: auto;
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+#admin_hist_table th  {
+    height: 40px;
+    border: 1px solid black;
+}
+
+.visu_table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 90%;
+    margin: 5px auto 5px auto;
+}
+
+#admin_hist_table td,#admin_hist_table th,.visu_table td,.visu_table th{
+    min-width: 75px;
+    padding: 5px 10px 5px 10px;
+    text-align: center;
+}
+
+#admin_hist_table .row1{
+    background-color: #CCC;
+}
+
+.visu_table .row1 {
+    background-color: #EEE;
+}
+
+#admin_hist_table .row0{
+    background-color: #EEE;
+}
+
+.visu_table .row0 {
+    background-color: #FFF;
+}
+
+#options {
+    margin: 10px auto 0 auto;
+    width: 90%;
+}
+
+.options_left {
+    text-align: left;
+}
+
+.options_right {
+    text-align: right;
+}
+
+#options td {
+    width: 25%;
+}
+
+.crossed_eye {
+    margin: 4px 0 0 1px;
+    width: 25px;
+}
+
+#arch_title {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.archives {
+    width: auto;
+    margin: auto;
+    border-collapse: collapse;
+}
+
+.archives .row0 .name {
+    background-color: #EEE;
+}
+
+.archives .row1 .name {
+    background-color: #CCC;
+}
+
+.archives .row1 .name, .archives .row0 .name{
+    padding: 0 10px 0 10px;
+}
+
+.archives tr{
+    border: 2px solid black;
+}
+.archives input[type="submit"],.archives button[type="submit"]{
+    background-color: #ff952b;
+}
+
+.archives input[type="submit"]:hover,.archives button[type="submit"]:hover{
+    background-color: #ce6700;
+}
