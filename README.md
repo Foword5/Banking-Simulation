@@ -1,4 +1,4 @@
-#Banking Simulation
+# Banking Simulation
 A project I did in college, it's a simulation to calculate the banking interest of a loan
 
 Coded mostly in PHP, in a group of 6, in wich I was the project director and lead developer.
